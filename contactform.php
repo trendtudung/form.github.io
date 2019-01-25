@@ -16,7 +16,7 @@ $formproc->EnableCaptcha($captcha);
 
 //1. Add your email address here.
 //You can add more than one receipients.
-$formproc->AddRecipient('tests@html-form-guide.com'); //<<---Put your email address here
+$formproc->AddRecipient('trendtudung.buymuslimsproduct@blogger.com '); //<<---Put your email address here
 
 
 //2. For better security. Get a random tring from this link: http://tinyurl.com/randstr
@@ -59,8 +59,8 @@ if(isset($_POST['submitted']))
 
 <div><span class='error'><?php echo $formproc->GetErrorMessage(); ?></span></div>
 <div class='container'>
-    <label for='name' >Your Full Name*: </label><br/>
-    <input type='text' name='name' id='name' value='<?php echo $formproc->SafeDisplay('name') ?>' maxlength="50" /><br/>
+    <label for='name' >Title*: </label><br/>
+    <input type='text' name='name' id='name' value='<?php echo $formproc->SafeDisplay('name') ?>' maxlength="100" /><br/>
     <span id='contactus_name_errorloc' class='error'></span>
 </div>
 <div class='container'>
@@ -74,7 +74,7 @@ if(isset($_POST['submitted']))
     <textarea rows="10" cols="50" name='message' id='message'><?php echo $formproc->SafeDisplay('message') ?></textarea>
 </div>
 <div class='container'>
-    <label for='photo' >Upload your photo:</label><br/>
+    <label for='photo' >Upload photo:</label><br/>
     <input type="file" name='photo' id='photo' /><br/>
     <span id='contactus_photo_errorloc' class='error'></span>
 </div>
@@ -103,7 +103,7 @@ Uses the excellent form validation script from JavaScript-coder.com-->
     var frmvalidator  = new Validator("contactus");
     frmvalidator.EnableOnPageErrorDisplay();
     frmvalidator.EnableMsgsTogether();
-    frmvalidator.addValidation("name","req","Please provide your name");
+    frmvalidator.addValidation("name","req","Please provide product name");
 
     frmvalidator.addValidation("email","req","Please provide your email address");
 
